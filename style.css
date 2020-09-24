@@ -1,0 +1,38 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+button{
+    width: 700px;
+    height: 600px;
+    position: absolute;
+    bottom: 25%;
+}
+#clicks{
+    font-size: x-large;
+}
+a{
+    color: black;
+}
+#github{
+    position: absolute;
+    bottom: 1%;
+}
+@media (prefers-color-scheme: dark){
+    body
+    {
+        background: #272b28;
+    }
+    button{
+        background-color: #91908d;
+    }
+    p{
+        color: white;
+    }
+    a{
+        color: white;
+    }
+}
