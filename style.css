@@ -5,9 +5,9 @@ body{
     align-items: center;
     text-align: center;
 }
-button{
-    width: 700px;
-    height: 600px;
+#button{
+    width: 200px;
+    height: 100px;
     position: absolute;
     bottom: 25%;
 }
@@ -20,6 +20,11 @@ a{
 #github{
     position: absolute;
     bottom: 1%;
+}
+.mini{
+    position: absolute;
+    left: 2%;
+    top: 5%;
 }
 @media (prefers-color-scheme: dark){
     body
