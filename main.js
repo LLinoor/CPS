@@ -2,6 +2,7 @@ const button = document.getElementById('button')
 const increase = document.getElementById('increase');
 const decrease = document.getElementById('decrease');
 const clicks = document.getElementById('clicks')
+const resetting = document.getElementById('resetting')
 
 var firstClick = false
 var currentPlace = 2
@@ -11,7 +12,7 @@ var width = ["70px", "150px", "200px", "400px", "600px", "1000px", "1600px"]
 click = 0;
 
 function launch() {
-    setTimeout(() => {
+    launching = setTimeout(() => {
         button.disabled = true
         button.innerHTML = "See your results !"
         clicks.innerHTML = `You have a ratio of  : ${click / 10} clicks per seconds`
@@ -23,6 +24,14 @@ function launch() {
         firstClick = false
     }, 10000);
   }
+
+function reset(){
+  clearTimeout(launching)
+  button.disabled = false;
+  button.innerHTML = "Click !"
+  firstClick = false
+  clicks.innerHTML = `Click :`
+}
 
 button.addEventListener("click", function(event) {
   if (firstClick == false) {
@@ -37,6 +46,11 @@ button.addEventListener("click", function(event) {
   }
   event.preventDefault();
 });
+
+resetting.addEventListener("click", function(event){
+  reset()
+event.preventDefault();
+})
 
 increase.addEventListener("click", function(event){
   if (currentPlace == 5){
